@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    background: #0b0b0b;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+
+    max-width: 600px;
+
+    background: #151515;
+
+    padding: 40px;
+
+    border-radius: 12px;
+
+    border: 1px solid #333;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+
+    text-align: center;
+}
+
+h1 {
+    color: #d4af37;
+
+    margin-bottom: 25px;
+
+    font-size: 30px;
+}
+
+.search-box {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    flex: 1;
+
+    padding: 14px;
+
+    border: 1px solid #444;
+
+    border-radius: 5px;
+
+    background: #202020;
+
+    color: white;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+.search-box input:focus {
+    border-color: #d4af37;
+}
+
+.search-box button {
+    padding: 14px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #d4af37;
+
+    color: #000;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #f0cf55;
+}
+
+.search-box button:disabled {
+    cursor: wait;
+    opacity: 0.7;
+}
+
+.search-box input:focus-visible,
+.search-box button:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
+#message {
+    color: #d4af37;
+
+    margin-bottom: 15px;
+}
+
+.country-card {
+    margin-top: 20px;
+
+    padding: 25px;
+
+    background: #202020;
+
+    border: 1px solid #444;
+
+    border-radius: 8px;
+
+    text-align: left;
+}
+
+.country-card img {
+    display: block;
+
+    width: 220px;
+
+    max-width: 100%;
+
+    height: auto;
+
+    margin: 0 auto 20px;
+
+    border-radius: 4px;
+}
+
+.country-card p {
+    overflow-wrap: anywhere;
+}
+
+.country-card h2 {
+    text-align: center;
+
+    color: #d4af37;
+
+    margin-bottom: 20px;
+}
+
+.country-card p {
+    padding: 8px 0;
+
+    border-bottom: 1px solid #333;
+
+    color: #ddd;
+}
+
+.country-card strong {
+    color: #d4af37;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+}

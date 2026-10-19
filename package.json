@@ -1,0 +1,12 @@
+{
+  "name": "country-info-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A country information API and search website",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
