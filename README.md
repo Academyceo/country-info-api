@@ -1,8 +1,8 @@
 # Country Info API
 
-A small Node.js server and country-search website. The server uses free,
-no-key country data and World Bank population and region data, then exposes a
-normalized JSON API to the browser.
+A country-search website and optional Node.js JSON API. The website works on
+GitHub Pages and other static hosts by loading country data directly from free,
+no-key country data and World Bank services.
 
 ## Run
 
@@ -13,7 +13,7 @@ npm start
 ```
 
 Open `http://localhost:3000` in a browser. The server does not require
-third-party npm packages.
+third-party npm packages and provides the optional API endpoints below.
 
 ## API
 
@@ -28,5 +28,8 @@ provide them. The country catalog is cached in memory for six hours.
 The upstream catalog currently supplies 250 records representing 248 unique
 ISO-3 codes, including territories and other country-level regions.
 
-The API returns JSON errors with an appropriate HTTP status for invalid input,
-unknown countries, and upstream service failures.
+The website does not call these local API endpoints, because static hosting
+such as GitHub Pages cannot run a Node.js server. Instead it fetches the data
+from the no-key providers directly, so country searches work on the published
+GitHub Pages site as well as locally. Population and country details are cached
+in memory while the page remains open.
